@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <h1>User Registration Form</h1>
+    <form method="post" action="/register">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="checkbox" id="is_user" name="is_user">
+        <label for="is_user">User</label><br>
+
+        <input type="checkbox" id="is_developer" name="is_developer">
+        <label for="is_developer">Developer</label><br>
+
+        <input type="checkbox" id="is_admin" name="is_admin">
+        <label for="is_admin">Admin</label><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

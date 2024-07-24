@@ -1,0 +1,10 @@
+alembic
+fastapi[all]
+psycopg2
+python-dotenv
+sqlalchemy
+asyncpg
+uvicorn
+folium
+passlib
+bcrypt

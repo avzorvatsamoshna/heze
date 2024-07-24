@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login V1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400&display=swap" rel="stylesheet">
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+}
+
+.login-v-1 {
+  background: #25293C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.top-shape {
+  position: absolute;
+  left: 445px;
+  top: 118px;
+  width: 237.4px;
+  height: 233.6px;
+}
+
+.bottom-shape {
+  position: absolute;
+  right: 433px;
+  bottom: 124px;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  border-radius: 20px;
+  border: 2px dashed rgba(115, 103, 240, 0.16);
+}
+
+.rectangle-1 {
+  width: 135px;
+  height: 135px;
+  background: rgba(115, 103, 240, 0.08);
+  border-radius: 10px;
+  margin: auto;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  background: #2F3349;
+  border-radius: 6px;
+  padding: 50px 30px;
+  box-shadow: 0px 3px 12px 0px rgba(19, 17, 32, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.vuexy-logo {
+  width: 100px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.vuexy {
+  font-weight: 700;
+  font-size: 22px;
+  color: rgba(225, 222, 245, 0.9);
+}
+
+.welcome h2 {
+  font-weight: 500;
+  font-size: 24px;
+  color: rgba(225, 222, 245, 0.9);
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(225, 222, 245, 0.7);
+  margin-bottom: 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-form label {
+  font-weight: 400;
+  font-size: 13px;
+  color: rgba(225, 222, 245, 0.9);
+  margin-bottom: 4px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  color: rgba(225, 222, 245, 0.9);
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #7367F0;
+  box-shadow: 0 0 5px rgba(115, 103, 240, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.login-form input::placeholder {
+  color: rgba(225, 222, 245, 0.4);
+}
+
+.password-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-field input {
+  flex-grow: 1;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(225, 222, 245, 0.9);
+}
+
+.options input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.options a {
+  font-weight: 400;
+  font-size: 15px;
+  color: #7367F0;
+  text-decoration: none;
+}
+
+.login-button {
+  background: #7367F0;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #FFFFFF;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0px 2px 6px 0px rgba(115, 103, 240, 0.3);
+  margin-bottom: 24px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.divider hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid rgba(225, 222, 245, 0.12);
+}
+
+.divider span {
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(225, 222, 245, 0.9);
+  margin: 0 10px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.social-login button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.social-login img {
+  width: 16px;
+  height: 16px;
+}
+
+
+  </style>
+  </head>
+  <body>
+    <div class="login-v-1">
+
+      <div class="bottom-shape">
+        <div class="rectangle-1"></div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <header class="logo">
+            <img class="vuexy-logo" src="static/img/logo.png" alt="Vuexy Logo" />
+
+          </header>
+          <div class="welcome">
+            <h2>Welcome to osint-proj!</h2>
+            <p>Please sign in to your account and start the adventure</p>
+          </div>
+          <form action="/login" method="post" class="login-form">
+            <label for="username">Email or Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your email or username">
+
+            <label for="password">Password</label>
+            <div class="password-field">
+              <input type="password" id="password" name="password" placeholder="··································································································">
+              <button type="button" class="toggle-password">
+              </button>
+            </div>
+
+
+
+            <button type="submit" class="login-button">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

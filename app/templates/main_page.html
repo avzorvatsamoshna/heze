@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Real-time Map</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body>
+    <div id="map" style="width: 50%; height: 50vh;"></div>
+    <script>
+        var map = L.map('map').setView([0, 0], 1);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([0, 0]).addTo(map);
+
+        async function updateMarker() {
+            const response = await fetch('/update_marker');
+            const data = await response.json();
+            marker.setLatLng([data.lat, data.lng]);
+        }
+
+        setInterval(updateMarker, 1);
+    </script>
+
+    <form method="get" action="/logout"><input type="submit" value="Logout"></form>
+</body>
+</html>
